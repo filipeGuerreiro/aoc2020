@@ -1,14 +1,16 @@
-# app
+# Advent of Code
 
-A Clojure library designed to ... well, that part is up to you.
+Clojure solutions for the Advent of Code challenge 2020.
 
 ## Usage
 
-FIXME
+```shell
+lein run d[1:25].p[1:2]
+```
 
 ## License
 
-Copyright © 2020 FIXME
+Copyright © 2020 Filipe Guerreiro
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at
