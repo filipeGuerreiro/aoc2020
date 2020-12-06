@@ -9,7 +9,7 @@
         ch        (first ch)
         pwparts   (group-by identity (seq pw))
         num       (count (pwparts ch))]
-    (policy pw ch num hi lo)))
+    (policy pw ch num (Integer/parseInt hi) (Integer/parseInt lo))))
 (defn- count-valid-lines
   [in policy]
   (->> in
@@ -19,7 +19,7 @@
 
 (defn- part-1-policy
   [pw ch num hi lo]
-  (and (<= num (Integer/parseInt hi)) (>= num (Integer/parseInt lo))))
+  (and (<= num hi) (>= num lo)))
 (defn part-1
   [in]
   (count-valid-lines in part-1-policy))
@@ -27,8 +27,8 @@
 (defn- part-2-policy
   [pw ch num hi lo]
   (let [pwparts (vec (seq pw))
-        chlo    (= ch (pwparts (dec (Integer/parseInt lo))))
-        chhi    (= ch (pwparts (dec (Integer/parseInt hi))))]
+        chlo    (= ch (pwparts (dec lo)))
+        chhi    (= ch (pwparts (dec hi)))]
     (and (or chlo chhi)
          (not (and chlo chhi)))))
 (defn part-2
