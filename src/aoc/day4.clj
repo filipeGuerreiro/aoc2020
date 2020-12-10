@@ -8,16 +8,23 @@
     (str ":" k " " v)))
 (defn- parse
   [in]
-  (let [ss (str/split in #"\n\n")]
-    (->> ss
-         (map #(str/split % #" "))
-         (map #(->> % println kv->edn))
-         (map #(edn/read-string (str "{" % "}"))))))
+  (as-> in i
+    (str/split i #"\n\n")
+    (map #(str/replace % #"\n" " ") i)
+    (map #(kv->edn %) i)
+    (map #(edn/read-string (str "{" % "}")) i)))
+                                        ;println)))
+                                        ; (map #(-> %
+                                        ;          (str/split #" "))))
+
+;;println
+;;(->> (map #(kv->edn (println %))))
+;;(map #(edn/read-string (str "{" % "}"))))))
 
 (defn part-1
-  [in]
-  (parse in))
+[in]
+(parse in))
 
 (defn part-2
-  [in]
-  in)
+[in]
+in)
