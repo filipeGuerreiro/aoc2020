@@ -4,8 +4,10 @@
 
 (defn- kv->edn
   [in]
-  (let [[k v] (str/split in #":")]
-    (str ":" k " " v)))
+  (as-> in i
+    (str/split i #" ")
+    (map #(str ":" (str/replace % #":" " \"") "\"") i)
+    (str/join " " i)))
 (defn- parse
   [in]
   (as-> in i
@@ -13,18 +15,11 @@
     (map #(str/replace % #"\n" " ") i)
     (map #(kv->edn %) i)
     (map #(edn/read-string (str "{" % "}")) i)))
-                                        ;println)))
-                                        ; (map #(-> %
-                                        ;          (str/split #" "))))
-
-;;println
-;;(->> (map #(kv->edn (println %))))
-;;(map #(edn/read-string (str "{" % "}"))))))
 
 (defn part-1
-[in]
-(parse in))
+  [in]
+  (parse in))
 
 (defn part-2
-[in]
-in)
+  [in]
+  in)
