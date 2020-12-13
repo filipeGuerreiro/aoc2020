@@ -3,7 +3,7 @@
             [aoc.day2]
             [aoc.day3]
             [aoc.day4]
-            ; [aoc.day5]
+            [aoc.day5]
             ; [aoc.day6]
             ; [aoc.day7]
             ; [aoc.day8]
@@ -44,8 +44,8 @@
     "d3.p2" (println (aoc.day3/part-2 (read-input "day3.in")))
     "d4.p1" (println (aoc.day4/part-1 (read-input "day4.in")))
     "d4.p2" (println (aoc.day4/part-2 (read-input "day4.in")))
-                                        ; "d5.p1" (println (aoc.day5/part-1 (read-input "day5.in")))
-                                        ; "d5.p2" (println (aoc.day5/part-2 (read-input "day5.in")))
+    "d5.p1" (println (aoc.day5/part-1 (read-input "day5.in")))
+    "d5.p2" (println (aoc.day5/part-2 (read-input "day5.in")))
                                         ; "d6.p1" (println (aoc.day6/part-1 (read-input "day6.in")))
                                         ; "d6.p2" (println (aoc.day6/part-2 (read-input "day6.in")))
                                         ; "d7.p1" (println (aoc.day7/part-1 (read-input "day7.in")))
