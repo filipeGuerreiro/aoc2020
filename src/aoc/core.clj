@@ -6,24 +6,24 @@
             [aoc.day5]
             [aoc.day6]
             [aoc.day7]
-            ; [aoc.day8]
-            ; [aoc.day9]
-            ; [aoc.day10]
-            ; [aoc.day11]
-            ; [aoc.day12]
-            ; [aoc.day13]
-            ; [aoc.day14]
-            ; [aoc.day15]
-            ; [aoc.day16]
-            ; [aoc.day17]
-            ; [aoc.day18]
-            ; [aoc.day19]
-            ; [aoc.day20]
-            ; [aoc.day21]
-            ; [aoc.day22]
-            ; [aoc.day23]
-            ; [aoc.day24]
-            ; [aoc.day25]
+            [aoc.day8]
+                                        ; [aoc.day9]
+                                        ; [aoc.day10]
+                                        ; [aoc.day11]
+                                        ; [aoc.day12]
+                                        ; [aoc.day13]
+                                        ; [aoc.day14]
+                                        ; [aoc.day15]
+                                        ; [aoc.day16]
+                                        ; [aoc.day17]
+                                        ; [aoc.day18]
+                                        ; [aoc.day19]
+                                        ; [aoc.day20]
+                                        ; [aoc.day21]
+                                        ; [aoc.day22]
+                                        ; [aoc.day23]
+                                        ; [aoc.day24]
+                                        ; [aoc.day25]
             ))
 
 (defn read-input
@@ -50,8 +50,8 @@
     "d6.p2" (println (aoc.day6/part-2 (read-input "day6.in")))
     "d7.p1" (println (aoc.day7/part-1 (read-input "day7.in")))
     "d7.p2" (println (aoc.day7/part-2 (read-input "day7.in")))
-                                        ; "d8.p1" (println (aoc.day8/part-1 (read-input "day8.in")))
-                                        ; "d8.p2" (println (aoc.day8/part-2 (read-input "day8.in")))
+    "d8.p1" (println (aoc.day8/part-1 (read-input "day8.in")))
+    "d8.p2" (println (aoc.day8/part-2 (read-input "day8.in")))
                                         ; "d9.p1" (println (aoc.day9/part-1 (read-input "day9.in")))
                                         ; "d9.p2" (println (aoc.day9/part-2 (read-input "day9.in")))
                                         ; "d10.p1" (println (aoc.day10/part-1 (read-input "day10.in")))
