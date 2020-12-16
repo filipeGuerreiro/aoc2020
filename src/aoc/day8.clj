@@ -1,6 +1,5 @@
 (ns aoc.day8
-  (:require [clojure.string :as str]
-            [aoc.util :refer :all]))
+  (:require [clojure.string :as str]))
 
 (defn- parse-line
   [i line]
@@ -36,18 +35,6 @@
         {:success (not looped), :acc acc, :execd exec-code}
         (let [{a :add, j :jmp} (calc-next (get code i))]
           (recur (+ i j) (+ acc a) (conj exec-code i)))))))
-
-(def test-in
-  "nop +0
-acc +1
-jmp +4
-acc +3
-jmp -3
-acc -99
-acc +1
-jmp -4
-acc +6")
-
 :input "acc +1\njmp -3\nnop +3"
 :output 1
 (defn part-1
@@ -57,6 +44,8 @@ acc +6")
        (run-code)
        (:acc)))
 
+:input [{:ins "acc" :val 1} {:ins "jmp" :val -3} {:ins "nop" :val 3}]
+:output 3021
 (defn- run-mod-code
   [code]
   (let [{success :success, acc :acc, execd :execd} (run-code code)
